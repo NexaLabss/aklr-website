@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKLR — Akulker Labs</title>
+  <meta name="description" content="AKLR, Solana üzerinde oluşturulmuş şeffaf ve topluluk odaklı dijital token." />
+  <meta name="theme-color" content="#070816" />
+
+  <meta property="og:title" content="AKLR — Akulker Labs" />
+  <meta property="og:description" content="Solana üzerinde hızlı, şeffaf ve topluluk odaklı token." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="AKLR ana sayfa">
+      <span class="brand-mark"><span>A</span></span>
+      <span class="brand-text">
+        <strong>AKLR</strong>
+        <small>Akulker Labs</small>
+      </span>
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Menüyü aç">☰</button>
+
+    <nav id="nav">
+      <a href="#about">Hakkında</a>
+      <a href="#tokenomics">Token</a>
+      <a href="#roadmap">Yol Haritası</a>
+      <a href="#security">Güvenlik</a>
+    </nav>
+
+    <a class="header-cta"
+       href="https://raydium.io/swap/?inputMint=So11111111111111111111111111111111111111112&outputMint=CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK"
+       target="_blank" rel="noopener">AKLR Al</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <div class="status-pill">
+          <span class="pulse"></span>
+          Solana üzerinde aktif
+        </div>
+
+        <h1>
+          Topluluk odaklı<br>
+          <span>yeni nesil token.</span>
+        </h1>
+
+        <p class="hero-description">
+          AKLR; Solana'nın hızlı ve düşük maliyetli altyapısı üzerinde oluşturulmuş,
+          sabit arzlı ve zincir üzerinde doğrulanabilir bir dijital varlıktır.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary"
+             href="https://raydium.io/swap/?inputMint=So11111111111111111111111111111111111111112&outputMint=CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK"
+             target="_blank" rel="noopener">
+             Raydium'da Al / Sat
+          </a>
+          <button class="btn btn-secondary" id="copyMint">Mint Adresini Kopyala</button>
+        </div>
+
+        <div class="contract-box">
+          <div>
+            <span>Resmî mint adresi</span>
+            <code>CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK</code>
+          </div>
+          <a href="https://solscan.io/token/CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK" target="_blank" rel="noopener">Solscan ↗</a>
+        </div>
+        <p class="copy-message" id="copyMessage" aria-live="polite"></p>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="glow-card">
+          <div class="coin-shell">
+            <div class="coin">
+              <span class="coin-a">A</span>
+              <small>AKLR</small>
+            </div>
+          </div>
+
+          <div class="market-heading">
+            <div>
+              <span>Akulker</span>
+              <strong>AKLR / SOL</strong>
+            </div>
+            <span class="live-badge">LIVE</span>
+          </div>
+
+          <div class="mini-chart" aria-label="Dekoratif fiyat grafiği">
+            <svg viewBox="0 0 500 160" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="lineGradient" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#8b5cf6"/>
+                  <stop offset="100%" stop-color="#25e1b4"/>
+                </linearGradient>
+                <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#25e1b4" stop-opacity=".28"/>
+                  <stop offset="100%" stop-color="#25e1b4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="chart-area" d="M0 130 C40 124,55 108,90 114 C125 121,145 88,180 95 C220 104,235 55,275 68 C320 82,338 33,375 48 C412 63,443 22,500 30 L500 160 L0 160 Z"/>
+              <path class="chart-line" d="M0 130 C40 124,55 108,90 114 C125 121,145 88,180 95 C220 104,235 55,275 68 C320 82,338 33,375 48 C412 63,443 22,500 30"/>
+            </svg>
+          </div>
+
+          <div class="quick-stats">
+            <div><span>Toplam Arz</span><strong>1B AKLR</strong></div>
+            <div><span>Ağ</span><strong>Solana</strong></div>
+            <div><span>Ondalık</span><strong>9</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip reveal">
+      <div><span>✓</span> Mint Authority kaldırıldı</div>
+      <div><span>✓</span> Freeze Authority kaldırıldı</div>
+      <div><span>✓</span> Raydium likiditesi aktif</div>
+      <div><span>✓</span> Zincir üzerinde doğrulanabilir</div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading reveal">
+        <span class="eyebrow">NEDEN AKLR?</span>
+        <h2>Basit. Hızlı. Şeffaf.</h2>
+        <p>AKLR'nin temel yapısı açık, anlaşılır ve Solana blokzinciri üzerinde doğrulanabilir.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="icon">⚡</div>
+          <h3>Hızlı işlemler</h3>
+          <p>Solana altyapısı sayesinde işlemler saniyeler içinde ve düşük ağ maliyetiyle gerçekleşir.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="icon">◈</div>
+          <h3>Sabit arz</h3>
+          <p>Mint Authority kaldırılmıştır. Yeni AKLR üretilemez ve toplam arz artırılamaz.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="icon">◎</div>
+          <h3>Açık piyasa</h3>
+          <p>AKLR, Raydium üzerindeki likidite havuzu aracılığıyla serbestçe takas edilebilir.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section token-section" id="tokenomics">
+      <div class="section-heading reveal">
+        <span class="eyebrow">TOKEN BİLGİLERİ</span>
+        <h2>Rakamlarla AKLR</h2>
+      </div>
+
+      <div class="token-layout">
+        <div class="supply-card reveal">
+          <span class="supply-label">Toplam Arz</span>
+          <strong>1,000,000,000</strong>
+          <small>AKLR</small>
+          <div class="supply-ring">
+            <div><b>100%</b><span>Sabit arz</span></div>
+          </div>
+        </div>
+
+        <div class="token-details reveal">
+          <div class="detail-row"><span>Token adı</span><strong>Akulker</strong></div>
+          <div class="detail-row"><span>Sembol</span><strong>AKLR</strong></div>
+          <div class="detail-row"><span>Blokzinciri</span><strong>Solana</strong></div>
+          <div class="detail-row"><span>Ondalık</span><strong>9</strong></div>
+          <div class="detail-row"><span>Mint Authority</span><strong class="verified">Kaldırıldı ✓</strong></div>
+          <div class="detail-row"><span>Freeze Authority</span><strong class="verified">Kaldırıldı ✓</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="section-heading reveal">
+        <span class="eyebrow">YOL HARİTASI</span>
+        <h2>Adım adım büyüme</h2>
+      </div>
+
+      <div class="roadmap">
+        <article class="roadmap-item completed reveal">
+          <span class="road-number">01</span>
+          <div>
+            <small>TAMAMLANDI</small>
+            <h3>Token oluşturma</h3>
+            <p>AKLR Solana üzerinde oluşturuldu, metadata ve temel token bilgileri tanımlandı.</p>
+          </div>
+        </article>
+        <article class="roadmap-item completed reveal">
+          <span class="road-number">02</span>
+          <div>
+            <small>TAMAMLANDI</small>
+            <h3>Likidite ve güvenlik</h3>
+            <p>Raydium likiditesi açıldı; mint ve freeze yetkileri kalıcı olarak kaldırıldı.</p>
+          </div>
+        </article>
+        <article class="roadmap-item active reveal">
+          <span class="road-number">03</span>
+          <div>
+            <small>DEVAM EDİYOR</small>
+            <h3>Görünürlük ve topluluk</h3>
+            <p>Web sitesi, sosyal kanallar ve token takip platformlarındaki görünürlük geliştiriliyor.</p>
+          </div>
+        </article>
+        <article class="roadmap-item reveal">
+          <span class="road-number">04</span>
+          <div>
+            <small>GELECEK</small>
+            <h3>Sürdürülebilir büyüme</h3>
+            <p>Organik topluluk büyümesi, yeni iş birlikleri ve uzun vadeli proje geliştirme.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section security-section" id="security">
+      <div class="security-card reveal">
+        <div>
+          <span class="eyebrow">GÜVENLİK</span>
+          <h2>Her zaman mint adresini doğrula.</h2>
+          <p>Benzer isimli sahte tokenlardan korunmak için işlem yapmadan önce resmî mint adresini kontrol et.</p>
+        </div>
+        <div class="security-actions">
+          <button class="btn btn-primary" id="copyMintSecond">Adresi Kopyala</button>
+          <a class="btn btn-secondary" href="https://solscan.io/token/CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK" target="_blank" rel="noopener">Solscan'de İncele</a>
+          <a class="btn btn-secondary" href="https://dexscreener.com/solana/CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK" target="_blank" rel="noopener">DexScreener</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section risk-box reveal">
+      <div class="risk-icon">!</div>
+      <div>
+        <h3>Risk bildirimi</h3>
+        <p>Kripto varlıklar yüksek risk taşır. Bu web sitesi yatırım tavsiyesi sunmaz. Kendi araştırmanızı yapın ve kaybetmeyi göze alamayacağınız tutarlarla işlem yapmayın.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <a class="brand" href="#home">
+        <span class="brand-mark"><span>A</span></span>
+        <span class="brand-text"><strong>AKLR</strong><small>Akulker Labs</small></span>
+      </a>
+      <div class="footer-links">
+        <a href="https://raydium.io/swap/?inputMint=So11111111111111111111111111111111111111112&outputMint=CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK" target="_blank" rel="noopener">Raydium</a>
+        <a href="https://solscan.io/token/CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK" target="_blank" rel="noopener">Solscan</a>
+        <a href="https://dexscreener.com/solana/CyLBbS7E89Tq4BqkfjYBhm1u71s6aM5W9CWZtavqHjCK" target="_blank" rel="noopener">DexScreener</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Akulker Labs</span>
+      <span>Solana üzerinde oluşturulmuştur.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
