@@ -509,5 +509,15 @@ footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
   border-radius: 50%;
 }
 @media (max-width: 620px) {
-  .coin-logo { max-width: 140px; max-height: 140px; }
+  .coin-logo { max-width: 140px; max-height: 140px; }.coin-logo,
+.hero-logo,
+.main-logo {
+  display: block;
+  width: 320px;
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto;
+  transform: none;
+  object-fit: contain;
+}
 }
