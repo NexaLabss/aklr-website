@@ -513,7 +513,7 @@ footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
 .hero-logo,
 .main-logo {
   display: block;
-  width: 420px;
+  width: 350px;
   max-width: 85%;
   height: auto;
   margin: 0 auto;
