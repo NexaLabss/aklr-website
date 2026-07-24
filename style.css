@@ -478,4 +478,36 @@ footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
   .footer-links { flex-wrap: wrap; }
 }
 
-.brand-mark img{width:100%;height:100%;object-fit:contain;border-radius:12px}.coin img{width:180px;height:180px;object-fit:contain;display:block;margin:auto}
+
+/* AKLR logo sizing — prevents oversized image flash */
+.brand-mark {
+  overflow: hidden;
+  flex: 0 0 42px;
+}
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 42px;
+  max-height: 42px;
+  object-fit: cover;
+  border-radius: 13px;
+}
+.coin-logo-wrap {
+  overflow: hidden;
+  padding: 0;
+  background: #050505;
+  transform: none;
+}
+.coin-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 165px;
+  max-height: 165px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media (max-width: 620px) {
+  .coin-logo { max-width: 140px; max-height: 140px; }
+}
