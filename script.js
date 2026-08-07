@@ -38,3 +38,61 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+const translations = {
+  en: {
+    about: "About",
+    tokenomics: "Tokenomics",
+    roadmap: "Roadmap",
+    security: "Security",
+    buy: "Buy AKLR"
+  },
+  no: {
+    about: "Om prosjektet",
+    tokenomics: "Tokenøkonomi",
+    roadmap: "Veikart",
+    security: "Sikkerhet",
+    buy: "Kjøp AKLR"
+  },
+  es: {
+    about: "Acerca de",
+    tokenomics: "Tokenomía",
+    roadmap: "Hoja de ruta",
+    security: "Seguridad",
+    buy: "Comprar AKLR"
+  },
+  tr: {
+    about: "Hakkında",
+    tokenomics: "Tokenlar",
+    roadmap: "Yol Haritası",
+    security: "Güvenlik",
+    buy: "AKLR Al"
+  }
+};
+
+function setLanguage(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  document.documentElement.lang = lang === "no" ? "nb" : lang;
+
+  const navLinks = document.querySelectorAll("#nav > a");
+
+  if (navLinks[0]) navLinks[0].textContent = t.about;
+  if (navLinks[1]) navLinks[1].textContent = t.tokenomics;
+  if (navLinks[2]) navLinks[2].textContent = t.roadmap;
+  if (navLinks[3]) navLinks[3].textContent = t.security;
+
+  const buyButton = document.querySelector(".header-cta");
+  if (buyButton) buyButton.textContent = t.buy;
+
+  localStorage.setItem("aklr-language", lang);
+}
+
+document.querySelectorAll(".language-switcher [data-lang]").forEach(button => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.lang);
+  });
+});
+
+setLanguage(localStorage.getItem("aklr-language") || "en");
