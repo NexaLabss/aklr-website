@@ -95,7 +95,7 @@ document.querySelectorAll(".language-switcher [data-lang]").forEach(button => {
   });
 });
 
-setLanguage(localStorage.getItem("aklr-language") || "en");
+setLanguage("en");
 const heroBuy = document.getElementById("heroBuy");
 
 if (heroBuy) {
