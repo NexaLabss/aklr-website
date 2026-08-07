@@ -96,3 +96,25 @@ document.querySelectorAll(".language-switcher [data-lang]").forEach(button => {
 });
 
 setLanguage(localStorage.getItem("aklr-language") || "en");
+const heroBuy = document.getElementById("heroBuy");
+
+if (heroBuy) {
+  const buyTexts = {
+    en: "Buy AKLR",
+    no: "Kjøp AKLR",
+    es: "Comprar AKLR",
+    tr: "AKLR Al"
+  };
+
+  const updateHeroBuy = (lang) => {
+    heroBuy.textContent = buyTexts[lang] || buyTexts.en;
+  };
+
+  document.querySelectorAll(".language-switcher [data-lang]").forEach(button => {
+    button.addEventListener("click", () => {
+      updateHeroBuy(button.dataset.lang);
+    });
+  });
+
+  updateHeroBuy(localStorage.getItem("aklr-language") || "en");
+}
