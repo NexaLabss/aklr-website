@@ -116,5 +116,5 @@ if (heroBuy) {
     });
   });
 
-  updateHeroBuy(localStorage.getItem("aklr-language") || "en");
+  updateHeroBuy("en");
 }
